@@ -1,11 +1,10 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import QuickStats from '@/components/QuickStats';
 import SubjectCard from '@/components/SubjectCard';
 import RecentActivity from '@/components/RecentActivity';
 import StudyTimer from '@/components/StudyTimer';
-import { Calculator, Atom, Globe, BookOpen, Palette, Music } from 'lucide-react';
+import { Calculator, Atom, Globe, BookOpen, Palette, Music, FileText, Target } from 'lucide-react';
 
 const Index = () => {
   const subjects = [
