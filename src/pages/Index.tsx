@@ -1,4 +1,5 @@
-import React, { useState, useNavigate } from 'react';
+
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Book, Calculator, Globe, Atom, FileText, Users, Clock, Star, ChevronRight, Menu, Search, Bell, User, Play, Pause, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
