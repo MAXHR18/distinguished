@@ -1,11 +1,12 @@
-
-import React, { useState } from 'react';
+import React, { useState, useNavigate } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Book, Calculator, Globe, Atom, FileText, Users, Clock, Star, ChevronRight, Menu, Search, Bell, User, Play, Pause, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Index = () => {
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [timerMinutes, setTimerMinutes] = useState(25);
   const [timerSeconds, setTimerSeconds] = useState(0);
@@ -79,6 +80,14 @@ const Index = () => {
                   <Book className="h-5 w-5 ml-3" />
                   الصفحة الرئيسية
                 </a>
+                <Button
+                  variant="ghost"
+                  onClick={() => navigate('/teachers')}
+                  className="w-full justify-start flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"
+                >
+                  <Users className="h-5 w-5 ml-3" />
+                  المدرسين
+                </Button>
                 <a href="#" className="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
                   <Calculator className="h-5 w-5 ml-3" />
                   المواد الدراسية
@@ -105,6 +114,52 @@ const Index = () => {
               <p className="text-gray-600">ابدأ رحلتك التعليمية اليوم</p>
             </div>
 
+            {/* روابط سريعة */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <Card 
+                className="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                onClick={() => navigate('/teachers')}
+              >
+                <CardContent className="p-6 text-center">
+                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">المدرسين</h3>
+                  <p className="text-gray-600 text-sm mb-4">اختر مدرسك المفضل وابدأ التعلم</p>
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
+                    استكشف المدرسين
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <div className="p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Book className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">المواد الدراسية</h3>
+                  <p className="text-gray-600 text-sm mb-4">تصفح جميع المواد المتاحة</p>
+                  <Button variant="outline" className="w-full">
+                    عرض المواد
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <div className="p-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Star className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">التقييمات</h3>
+                  <p className="text-gray-600 text-sm mb-4">اختبر معلوماتك وحسن أداءك</p>
+                  <Button variant="outline" className="w-full">
+                    ابدأ الاختبار
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* باقي المحتوى الموجود */}
             {/* الإحصائيات */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <Card>
@@ -156,7 +211,7 @@ const Index = () => {
               </Card>
             </div>
 
-            {/* المواد الدراسية */}
+            {/* المواد الدراسية ومؤقت الدراسة */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               <Card>
                 <CardHeader>
