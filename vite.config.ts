@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -9,15 +10,18 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [ react()],
-  base: "/pedro-portfolio", 
-    mode === 'development' &&
-    componentTagger(),
+  plugins: [
+    react(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
+  base: "/", // تغيير هذا من "/pedro-portfolio" إلى "/"
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 }));
-
