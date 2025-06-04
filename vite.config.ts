@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  base: "/", // تغيير هذا من "/pedro-portfolio" إلى "/"
+  base: process.env.NODE_ENV === 'production' ? './' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
