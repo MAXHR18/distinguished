@@ -8,7 +8,7 @@ const TelegramModal = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   // رابط قناة التليجرام - يمكنك تغييره هنا
-  const TELEGRAM_CHANNEL_URL = "https://t.me/your_channel_name";
+  const TELEGRAM_CHANNEL_URL = "https://t.me/sad6ths";
 
   useEffect(() => {
     const hasVisited = localStorage.getItem('telegram-modal-shown');
