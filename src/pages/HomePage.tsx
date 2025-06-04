@@ -11,14 +11,14 @@ const HomePage = () => {
   const { theme, toggleTheme } = useTheme();
 
   // يمكنك تغيير اسم المنصة هنا
-  const PLATFORM_NAME = "منصة التعليم الإلكتروني";
+  const PLATFORM_NAME = "مـنـصـة الـمـتـمـيـزيـن";
 
   // بيانات المدرسين - يمكنك تعديل الأسماء والمواد هنا
   const teachers = [
-    { id: 1, name: "أ. محمد أحمد", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
-    { id: 2, name: "أ. فاطمة علي", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
-    { id: 3, name: "أ. أحمد محمود", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
-    { id: 4, name: "أ. سارة حسن", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
+    { id: 1, name: "حـسـيـن الهاشمي", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
+    { id: 2, name: "حـيدر ولـيد", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
+    { id: 3, name: "قـصـي العـمـيري", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
+    { id: 4, name: "قـصـي النـداوي", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
     { id: 5, name: "أ. عمر خالد", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
     { id: 6, name: "أ. نور الدين", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
     { id: 7, name: "أ. ليلى سعد", subject: "اسم المادة", image: "/teacher-placeholder.jpg" },
